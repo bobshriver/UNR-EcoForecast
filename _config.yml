@@ -6,11 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Ecological Dynamics & Forecasting
+title: Ecological Forecasting
 email: rshriver@unr.edu
 description: > # this means to ignore newlines until "baseurl:"
   Bob Shriver's course taught at UNR Spring 2022
-url: "https://bobshriver.github.io/UNR-Ecoforcast" # the base hostname & protocol for your site
+url: "https://bobshriver.github.io/UNR-Ecoforecast" # the base hostname & protocol for your site
 github_username:  bobshriver
 
 # Build settings
