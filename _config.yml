@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Ecological Dynamics & Forecasting
+email: peter.adler@usu.edu
+description: > # this means to ignore newlines until "baseurl:"
+  Peter Adler's course taught at Utah State University in Fall 2021.
+url: "https://pbadler.github.io/forecasting-dynamics-course" # the base hostname & protocol for your site
+github_username:  pbadler
+
+# Build settings
+markdown: kramdown
+
+theme: jekyll-theme-minimal
