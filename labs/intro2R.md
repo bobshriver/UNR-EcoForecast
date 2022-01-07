@@ -1,9 +1,4 @@
----
-title: "Introduction to R"
-output:
-html_document: default
-layout: post
----
+
 
 ### Tutorials ###
 
