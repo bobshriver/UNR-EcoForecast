@@ -351,19 +351,13 @@ pre code {
 </div>
 
 
-<div id="tutorials" class="section level3">
-<h3>Tutorials</h3>
-<p>First, if you are completely new to R, download this tutorial and work through the exercises: (<a href="http://www.nceas.ucsb.edu/files/scicomp/Dloads/RProgramming/BestFirstRTutorial.pdf" class="uri">http://www.nceas.ucsb.edu/files/scicomp/Dloads/RProgramming/BestFirstRTutorial.pdf</a>)</p>
-</div>
-<div id="logistic-growth-exercise" class="section level3">
-<h3>Logistic growth exercise</h3>
+<div id="dd-population-model-lab" class="section level2">
+<h2>DD population model lab</h2>
 <p>The difference equation for logistic growth is:</p>
 <p><span class="math inline">\(N_{t+1} = N_t + rN_t(1 - N_t / K)\)</span></p>
-<p>Let’s first set this up in a spreadsheet. Label column 1 “Parameters,” and type “r” and then “K” into the first two cells of column 1, respectively. Label column 2 “Values” and assign a value for r between 0 and 0.5, and any value of K you want. Label column 3 “Time” and fill in a series from 1:100 down the column.</p>
-<p>Label column 4 “N.” Enter “2” in the first cell, but leave the rest blank. In the second cell of this column, you will enter the formula above. “r” and “K” will refer to the values you entered in column 2; make sure you use the $ sign to fix the cell address. Nt should refer to the cell above (cell 1 of column 4 in this case). Once the formula is entered, and you have checked that it works, copy and paste it down the column, as far as your “Time” variable extends. Do the numbers make sense? How about when you change r or K?</p>
-<p>Now we will do the same exercise in R. First, open R, then go to File&gt;New script. This is where we will code the script. (Try not to look at my example code below until you get totally stuck!) Your script will need to contain the following steps:</p>
+<p>First, open R, then go to File&gt;New script. This is where we will code the script. (Try not to look at my example code below until you get totally stuck!) Your script will need to contain the following steps:</p>
 <ol style="list-style-type: decimal">
-<li><p>Assign values to “r” and “K” (hint: all you will need is the “=” sign)</p></li>
+<li><p>Assign values to “r” and “K”</p></li>
 <li><p>Create a “Time” vector, just as we did on the spreadsheet (hint: use the <code>seq()</code> function). To make sure this worked, you can copy and paste from the script editor into the R command line, or you can select the line, and go to Edit&gt;Run line or selection.</p></li>
 <li><p>Create an “N” vector using rep(). I recommend filling it with zeros or NAs. To assign an initial value to <code>N</code> at time 1, use <code>N[1] =</code> .</p></li>
 <li><p>(Optional) Create a logistic growth function (use <code>function()</code>). This will probably be the trickiest part of the program. Refer back the section in the first tutorial on creating functions, or ask me for help.</p></li>
@@ -371,13 +365,10 @@ pre code {
 <li><p>Graph the results using <code>plot()</code>.</p></li>
 </ol>
 <p>When you are done, <em>submit your finished script on Canvas</em>. Please submit it as a .R or .txt file (not Word or pdf).</p>
-</div>
 <div id="other-online-resources" class="section level3">
 <h3>Other online resources</h3>
 <ul>
-<li><p>A cheat-sheet of R functions I put together: (<a href="http://www.nceas.ucsb.edu/files/scicomp/Dloads/RCourse/PeterAdlerRCheatSheet.pdf" class="uri">http://www.nceas.ucsb.edu/files/scicomp/Dloads/RCourse/PeterAdlerRCheatSheet.pdf</a>)</p></li>
-<li><p>A more in-depth tutorial: (<a href="http://www.nceas.ucsb.edu/files/scicomp/Dloads/RProgramming/RForBeginners.pdf" class="uri">http://www.nceas.ucsb.edu/files/scicomp/Dloads/RProgramming/RForBeginners.pdf</a>)</p></li>
-<li><p>The official R manuals are found under the Help menu of the user interface.</p></li>
+<li>The official R manuals are found under the Help menu of the user interface.</li>
 </ul>
 </div>
 <div id="if-you-get-stuck." class="section level3">
@@ -401,12 +392,14 @@ growth = function(r,K,N){
 
 # the main loop (notice I start the loop at 2, 
 # since N[1] is already assigned the initial value)
-for(i in 2:length(Time)){
-    N[i] = growth(r=r,K=K,N=N[i-1])
+for(t in 2:length(Time)){
+    N[t] = growth(r=r,K=K,N=N[t-1])
 }
 
 plot(Time,N,type=&quot;l&quot;)
+
 </code></pre>
+</div>
 </div>
 
 
