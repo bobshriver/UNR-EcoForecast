@@ -7,11 +7,11 @@
 
 # Site settings
 title: Ecological Dynamics & Forecasting
-email: peter.adler@usu.edu
+email: rshriver@unr.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Peter Adler's course taught at Utah State University in Fall 2021.
-url: "https://pbadler.github.io/forecasting-dynamics-course" # the base hostname & protocol for your site
-github_username:  pbadler
+  Bob Shriver's course taught at UNR Spring 2022
+url: "https://bobshriver.github.io/UNR-Ecoforcast" # the base hostname & protocol for your site
+github_username:  bobshriver
 
 # Build settings
 markdown: kramdown
