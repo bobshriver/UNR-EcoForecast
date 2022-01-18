@@ -21,7 +21,7 @@ First, open R, then go to File>New script. This is where we will code the script
 
 6. Graph the results using `plot()`.
 
-When you are done, *submit your finished script on Canvas*. Please submit 
+When you are done, *submit your finished script to Bob by email*. Please submit 
 it as a .R or .txt file (not Word or pdf).
 
 ### Other online resources ###
