@@ -115,6 +115,8 @@ fit_add = decompose(NDVI.ts, type = 'additive')
 plot(fit_add)
 str(fit_add)
 
+#What is the moving average window, hard to tell based on function documentation and output
+
 fit_mult = decompose(NDVI.ts, type = 'multiplicative')
 plot(fit_mult)
 str(fit_mult)
