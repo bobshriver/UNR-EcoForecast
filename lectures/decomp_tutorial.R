@@ -82,7 +82,11 @@ MA_m49 = ma(NDVI.ts, order=49, centre = TRUE)
 plot(NDVI.ts)
 lines(MA_m49, col="blue", lwd = 3)
 
-
+# # even length window
+MA_m12 = ma(NDVI.ts, order=12, centre = FALSE)
+MA_2x12 = ma(MA_m12, order=2,centre=FALSE)
+# plot(NDVI.ts)
+# lines(MA_2x12, col="green", lwd = 3)
 
 # Classic Decomposition uses a Moving Average to obtain a trend, then detrend the observed data.
 
