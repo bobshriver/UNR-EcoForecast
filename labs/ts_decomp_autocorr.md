@@ -10,9 +10,9 @@ The purpose of this exercise is to practice loading a time series, then decompos
 it and testing for temporal autocorrelation. You can adapt the code that we
 went over in class:
 
-[Time series decomposition](./../lectures/ts_decomposition.R)
+[Time series decomposition](https://github.com/bobshriver/UNR-EcoForecast/blob/main/lectures/decomp_tutorial.R)
 
-[Autocorrelation](./../lectures/autocorrelation.R)
+[Autocorrelation](https://github.com/bobshriver/UNR-EcoForecast/blob/main/lectures/autocorrelation.R)
 
 The first step is to download the data. We will work with climate data
 from Tuscon, AZ, not too far from Portal. The data come from a gridded climate product called
