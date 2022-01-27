@@ -11,6 +11,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))##set working directo
 
 library(forecast)
 library(astsa)
+library(tseries)
 
 # Let's start by thinking about an extreme case of a time series. Say I have a normal distribution
 # centered on zero and at each time step I randomly draw a value from the distribution
@@ -140,7 +141,7 @@ lag2.plot(NDVI.ts, rats.ts, 12)
 # 1. Autocorrelation is useful in that information about the past and future states
 #    of the system are encoded in the timeseries. This is information that can
 #    potentially be leveraged for forecasting.
-# 2. Autocorrelation is a statistical pain in the butt. Statistical approaches
+# 2. Autocorrelation can be  a statistical pain. Statistical approaches
 #    Assume iid: independent and identically distributed errors. i.e. that your
 #    data is a random draw from an underlying distribution. But autocorrelation
 #    means that your data is not a random draw. Each draw is influenced by the
