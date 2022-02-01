@@ -20,7 +20,7 @@ Start by loading in the data. We are then going to drop the last ten measurement
   
   `datafit<-data[1:(n-10),] ##This is our "observed data`
 
-1) Fit a AR(1) model to the NDVI observed data using the `lm` function (see example code below if you get stuck, but try it first and ask questions!!).
+1) Fit a AR(1) model to the NDVI observed data using the `lm` function. You will need to use indexing to match up NDVI at t with NDVI at t-1. (see example code below if you get stuck, but try it first and ask questions!!).
 
 2) Create a function to forecast the NDVI, and forecast the 10 months of the NDVI data that we witheld, treating the last observed value as your initial condition. Plot the forecast for the next ten months along points for the withheld data.  This function will is very similar to logistic growth function we built in lab 1. You can extract the model parameters using `model$coefficients`. 
 

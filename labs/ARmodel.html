@@ -360,7 +360,7 @@ pre code {
 <p><code>#remove last 10</code></p>
 <p><code>datafit&lt;-data[1:(n-10),] ##This is our &quot;observed data</code></p>
 <ol style="list-style-type: decimal">
-<li><p>Fit a AR(1) model to the NDVI observed data using the <code>lm</code> function (see example code below if you get stuck, but try it first and ask questions!!).</p></li>
+<li><p>Fit a AR(1) model to the NDVI observed data using the <code>lm</code> function. You will need to use indexing to match up NDVI at t with NDVI at t-1. (see example code below if you get stuck, but try it first and ask questions!!).</p></li>
 <li><p>Create a function to forecast the NDVI, and forecast the 10 months of the NDVI data that we witheld, treating the last observed value as your initial condition. Plot the forecast for the next ten months along points for the withheld data. This function will is very similar to logistic growth function we built in lab 1. You can extract the model parameters using <code>model$coefficients</code>.</p></li>
 <li><p>Repeat steps 1 &amp; 2 using rain at t-1 along with NDVI at t-1 to explain NDVI at t.</p></li>
 </ol>
