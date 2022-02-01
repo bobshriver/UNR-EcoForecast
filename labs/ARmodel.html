@@ -352,25 +352,25 @@ pre code {
 </div>
 
 
-<p>The purpose of this exercise is to fit a simple Gompertz model (AR(1) on the ln scale) and use it to forecast. We will be doing this using the Portal data that we used in last weeks lecture. Everyone should work in groups of two.</p>
+<p>The purpose of this exercise is to fit a simple AR(1) and use it to forecast. We will be doing this using the Portal NDVI data that we used in last weeks lecture. Everyone should work in groups of two.</p>
 <p><em>Each group should submit R script as attachments in an email to Bob</em></p>
 <p>Start by loading in the data. We are then going to drop the last ten measurements from the data, we will then and use the withheld data to test forcasting (see below).</p>
 <p><code>data = read.csv(&#39;./../data/portal_timeseries.csv&#39;)</code></p>
-<p><code>n&lt;-length(data$rodents)</code></p>
+<p><code>n&lt;-length(data$NDVI)</code></p>
 <p><code>#remove last 10</code></p>
 <p><code>datafit&lt;-data[1:(n-10),] ##This is our &quot;observed data</code></p>
 <ol style="list-style-type: decimal">
-<li><p>Fit a Gompertz model to the rodents the observed data using the <code>lm</code> function. Remember that the Gompertz model is the AR(1) model if we take the natural log of the population size, so dont forget to <code>log</code> the population size first. (see example code below if you get stuck, but try it first and ask questions!!)</p></li>
-<li><p>Create a function to forecast the population, and forecast the 10 months of the rodents data that we witheld, treating the last observed value as your initial condition. Plot the forecast for the next ten months along points for the withheld data. This function will is very similar to logistic growth function we built in lab 1. You can extract the model parameters using <code>model$coefficients</code>.</p></li>
-<li><p>Repeat steps 1 &amp; 2 using NDVI at t-1 along with population size at t-1 to explain population size at t.</p></li>
+<li><p>Fit a AR(1) model to the NDVI observed data using the <code>lm</code> function (see example code below if you get stuck, but try it first and ask questions!!).</p></li>
+<li><p>Create a function to forecast the NDVI, and forecast the 10 months of the NDVI data that we witheld, treating the last observed value as your initial condition. Plot the forecast for the next ten months along points for the withheld data. This function will is very similar to logistic growth function we built in lab 1. You can extract the model parameters using <code>model$coefficients</code>.</p></li>
+<li><p>Repeat steps 1 &amp; 2 using rain at t-1 along with NDVI at t-1 to explain NDVI at t.</p></li>
 </ol>
 <p>Example code for step 1</p>
 <p><code>data = read.csv(&#39;./../data/portal_timeseries.csv&#39;)</code></p>
-<p><code>n&lt;-length(data$rodents)</code></p>
+<p><code>n&lt;-length(data$NDVI)</code></p>
 <p><code>#remove last 10</code></p>
 <p><code>datafit&lt;-data[1:(n-10),]</code></p>
-<p><code>nfit&lt;-length(datafit$rodents)</code></p>
-<p><code>model&lt;-glm(log(rodents[-1])~log(rodents[-(nfit)]),data=datafit)</code></p>
+<p><code>nfit&lt;-length(datafit$NDVI)</code></p>
+<p><code>model&lt;-glm(NDVI[-1]~NDVI[-(nfit)],data=datafit)</code></p>
 <p><code>model</code></p>
 
 
