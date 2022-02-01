@@ -368,7 +368,7 @@ pre code {
 <p><code>data = read.csv(&#39;./../data/portal_timeseries.csv&#39;)</code></p>
 <p><code>n&lt;-length(data$rodents)</code></p>
 <p><code>#remove last 10</code></p>
-<p><code>datafit&lt;-data[1:(n-12),]</code></p>
+<p><code>datafit&lt;-data[1:(n-10),]</code></p>
 <p><code>nfit&lt;-length(datafit$rodents)</code></p>
 <p><code>model&lt;-glm(log(rodents[-1])~log(rodents[-(nfit)]),data=datafit)</code></p>
 <p><code>model</code></p>

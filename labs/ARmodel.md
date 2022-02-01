@@ -43,7 +43,7 @@ Example code for step 1
 
 `#remove last 10`
 
-`datafit<-data[1:(n-12),]`
+`datafit<-data[1:(n-10),]`
 
 `nfit<-length(datafit$rodents)`
 
