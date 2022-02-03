@@ -4,7 +4,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))##set working directo
 data = read.csv('./../data/portal_timeseries.csv')
 n<-length(data$NDVI)
 #remove last 10
-datafit<-data[1:(n-10),]
+datafit<-data[1:(n-10),] ##
 
 nfit<-length(datafit$NDVI)###Find length of shortened data frame
 model<-glm(NDVI[-1]~NDVI[-(nfit)],data=datafit)###Fit glm, indexing removes the first and last years from reponse/explanatory
