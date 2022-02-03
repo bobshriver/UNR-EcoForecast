@@ -13,7 +13,7 @@ model
 beta<-c(model$coefficients) #extract coefficients from fitted model. this will be used for forecast
 
 #Forecasting function. I chose to nest the loop inside the function. But it would also work to make a loop and just a function solve for the values for a single year.
-#yinit is the starting value, t is the number of years the forecast is for. 
+#yinit is the starting value, t is the number of years the forecast is for.
 ARforecast<-function(b0,b1,yinit,t){
   yout<-numeric(t)
   yout[1]<-yinit
