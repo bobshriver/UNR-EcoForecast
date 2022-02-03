@@ -4,7 +4,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))##set working directo
 data = read.csv('./../data/portal_timeseries.csv')
 n<-length(data$NDVI)
 #remove last 10
-datafit<-data[0:(n-10),]
+datafit<-data[1:(n-10),]
 
 nfit<-length(datafit$NDVI)###Find length of shortened data frame
 model<-glm(NDVI[-1]~NDVI[-(nfit)],data=datafit)###Fit glm, indexing removes the first and last years from reponse/explanatory
@@ -52,5 +52,5 @@ ARforecastrain<-function(b0,b1,b2,yinit,t){
 
 Forecast2<-ARforecastrain(b0=beta[1],b1=beta[2],b2=beta[3],yinit=datafit$NDVI[nfit],t=11)
 
-plot(1:10,Forecast2,ylab='NDVI',xlab='Month', type='l',ylim=c(0,.5))
+plot(1:11,Forecast2,ylab='NDVI',xlab='Month', type='l',ylim=c(0,.5))
 points(data$NDVI[(n-10):n], col='red')
