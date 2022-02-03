@@ -25,10 +25,10 @@ ARforecast<-function(b0,b1,yinit,t){
   
 }
 
-Forecast1<-ARforecast(b0=beta[1],b1=beta[2],yinit=datafit$NDVI[nfit],t=10)
+Forecast1<-ARforecast(b0=beta[1],b1=beta[2],yinit=datafit$NDVI[nfit],t=11)
 
 par(mfrow=c(2,1))
-plot(1:10,Forecast1,ylab='NDVI',xlab='Month', type='l', ylim=c(0,.5))
+plot(1:11,Forecast1,ylab='NDVI',xlab='Month', type='l', ylim=c(0,.5))
 points(data$NDVI[(n-10):n], col='red')
 
 
@@ -50,7 +50,7 @@ ARforecastrain<-function(b0,b1,b2,yinit,t){
   
 }
 
-Forecast2<-ARforecastrain(b0=beta[1],b1=beta[2],b2=beta[3],yinit=datafit$NDVI[nfit],t=10)
+Forecast2<-ARforecastrain(b0=beta[1],b1=beta[2],b2=beta[3],yinit=datafit$NDVI[nfit],t=11)
 
 plot(1:10,Forecast2,ylab='NDVI',xlab='Month', type='l',ylim=c(0,.5))
 points(data$NDVI[(n-10):n], col='red')
