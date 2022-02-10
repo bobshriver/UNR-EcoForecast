@@ -1,7 +1,7 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))##set working directory to current file 
 
 
-data = read.csv('./../data/portal_timeseries.csv')
+data = read.csv('data/portal_timeseries.csv')
 n<-length(data$NDVI)
 #remove last 10
 datafit<-data[1:(n-10),] ##
@@ -43,7 +43,7 @@ ARforecastrain<-function(b0,b1,b2,yinit,t){
   yout<-numeric(t)
   yout[1]<-yinit
   for (i in 2:t){
-    yout[i]<-b0+b1*yout[i-1]+b2*raint_1[i]
+    yout[i]<-b0+b1*yout[i-1]+b2*raint_1[i-1]
     
   }
   return(yout)
