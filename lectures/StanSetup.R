@@ -16,7 +16,7 @@ modeldata<-list(N=dim(cars)[1], x=cars$dist,y=cars$speed)
 ###The end result is a vector of parameters that make up the posterior distrbution.
 ###This code runs the stan model. It will first compile the code and then run through all of the chains sequentially
 ###There are a number of parameters you can adjust, chain lengths, number of chains. 
-fit1<-stan(file='StanExample.stan',data=modeldata)
+fit1<-stan(file='StanExample.stan',data=modeldata, chains=3,iter=2000, warmup=1000)
 fit1
 
 ###The extract function can used to extract the parameter value draw from the chains. 
@@ -34,7 +34,7 @@ hist(pars$sigma)
 
 
 ##visualizations to check convergence. Have chains converged? 
-launch_shinystan(fit)
+launch_shinystan(fit1)
 
 
 
