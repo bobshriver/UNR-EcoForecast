@@ -9,7 +9,7 @@
 //    https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started
 //
 
-// The input data is a vector 'y' of length 'N'.
+// The input data is a response vector 'y' and covariate 'x' both of length 'N'.
 data {
   int<lower=0> N;
   vector[N] y;
@@ -17,7 +17,7 @@ data {
 }
 
 // The parameters accepted by the model. Our model
-// accepts two parameters 'mu' and 'sigma'.
+// accepts three parameters 'mu' and 'b0', 'b1'.
 parameters {
   real b0;
   real b1;
@@ -25,11 +25,11 @@ parameters {
 }
 
 // The model to be estimated. We model the output
-// 'y' to be normally distributed with mean 'mu'
+// 'y' to be normally distributed with mean 'b0+b1*x'
 // and standard deviation 'sigma'.
 model {
   
-  //This is equivalent to our likelihood
+  //This is equivalent to likelihood
   y ~ normal(b0+b1*x, sigma);
   
   //alternative
