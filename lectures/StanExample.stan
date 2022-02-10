@@ -12,8 +12,8 @@
 // The input data is a response vector 'y' and covariate 'x' both of length 'N'.
 data {
   int<lower=0> N;
-  vector[N] y;
-  vector[N] x;
+  vector[N] y; //Response
+  vector[N] x; //Covariate
 }
 
 // The parameters accepted by the model. Our model
@@ -33,7 +33,7 @@ model {
   y ~ normal(b0+b1*x, sigma);
   
   //alternative
-  //for (i in 1:N){y[1] ~ normal(b0+b1*x[1], sigma)}
+  //for (i in 1:N){y[i] ~ normal(b0+b1*x[i], sigma)}
     
   //Priors
   b0~normal(0,10);
