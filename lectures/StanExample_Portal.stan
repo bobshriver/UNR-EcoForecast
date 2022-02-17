@@ -12,7 +12,7 @@
 // The input data is a response vector 'y' and covariate 'x' both of length 'N'.
 data {
   int<lower=0> N;
-  vector[N] y; //Response
+  vector[N] y; //Response NDVI
   vector[N] rain; //Covariate
 }
 
@@ -20,7 +20,7 @@ data {
 // accepts three parameters 'mu' and 'b0', 'b1'.
 parameters {
   real b0;
-  real b1;
+  real b1; //NDVI at t-1 effect
   real b2;
   real<lower=0> sigma;
 }
