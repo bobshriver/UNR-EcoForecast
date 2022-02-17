@@ -14,9 +14,9 @@ mathjax: true
 
 2) How does the SD of the predictive interval change as we predict forward in time? Does uncertainty become larger or smaller or stay the same? Why?
 
-3) What is the amount of paramater error relative to process error in year 1 of the forecast? What about year 6?
+3) What is the amount of paramater error relative to process variability in year 1 of the forecast? What about year 6?
 
-4) How would out predictive intervals look different if we assumed that $\sigma$ was observation error?
+4) How would our predictive intervals look different if we assumed that $\sigma$ was observation error?
 
 
 
