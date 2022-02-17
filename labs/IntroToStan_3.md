@@ -10,7 +10,7 @@ mathjax: true
 
 
 
-1) Add process variablity into the forecast we developed of mean NDVI last class and calculate 95% predictive intervals. Create a plot of the forecast timeseries with the overall mean and 95% credible intervals for the mean, 95% predictive intervals (process variability + parameter error), as well as the observed data.
+1) Add process variablity into the forecast we developed of mean NDVI last class and calculate 95% predictive intervals. Create a plot of the forecast timeseries with the overall mean and 95% credible intervals for the mean, 95% predictive intervals (process variability + parameter error), as well as the observed data. How many points fall outside the full predictive interval? How many might we expect given that we are forecasting 10 years with a 95% interval?
 
 2) How does the SD of the predictive interval change as we predict forward in time? Does uncertainty become larger or smaller or stay the same? Why?
 
