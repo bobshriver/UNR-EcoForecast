@@ -14,7 +14,7 @@ mathjax: true
 
 2) How does the SD of the predictive interval change as we predict forward in time? Does uncertainty become larger or smaller or stay the same? Why?
 
-3) How would our predictive intervals look different if we assumed there was no AR(1) term in the model? Why is this different?
+3) How would our predictive intervals look different if we assumed there was no AR(1) term in the model (i.e. drop b1* from the model and run again)? Why is this different?
 
 4) What is the amount of paramater error relative to process variability in year 10 of the forecast in both the AR(1) model and the non-AR(1) from question 3?
 

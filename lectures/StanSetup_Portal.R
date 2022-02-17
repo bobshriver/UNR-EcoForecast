@@ -41,34 +41,46 @@ hist(pars$sigma)
 
 
 ##visualizations to check convergence. Have chains converged? 
-#launch_shinystan(fit1)
+launch_shinystan(fit1)
 
 
-
-PredData<-data[(n-10):n,]
 PredOut<-matrix(NA,length(pars$b0),10)
-for (p in 1:length(pars$b0)){
-  NDVI<-PredData$NDVI[1]
-  for (t in 1:10){
-    NDVI<-pars$b0[p]+pars$b1[p]*NDVI+pars$b2[p]*PredData$rain[t]+rnorm(1,0,pars$sigma[p])
+datapred<-data[(n-10):n,]
 
+for(p in 1:length(pars$b0)){
+  NDVI<-datapred$NDVI[1]
+  
+    for (t in 1:10){
+   
+    NDVI<-pars$b0[p]+pars$b1[p]*NDVI+ pars$b2[p]*datapred$rain[t]
+    
     PredOut[p,t]<-NDVI
-
     }
-  }
+  
+}
+
+matplot(t(PredOut),type='l')
 
 
-PredData<-data[(n-10):n,]
 PredOut<-matrix(NA,length(pars$b0),10)
-for (p in 1:length(pars$b0)){
-  NDVI<-PredData$NDVI[1]
+datapred<-data[(n-10):n,]
+
+for(p in 1:length(pars$b0)){
+  NDVI<-datapred$NDVI[1]
+  
   for (t in 1:10){
-    NDVI<-pars$b0[p]+NDVI+pars$b2[p]*PredData$rain[t]+rnorm(1,0,pars$sigma[p])
+    
+    NDVI<-pars$b0[p]+pars$b1[p]*NDVI+ pars$b2[p]*datapred$rain[t]
     
     PredOut[p,t]<-NDVI
-    
   }
+  
 }
+
+matplot(t(PredOut),type='l')
+
+
+
 
 
 
