@@ -70,7 +70,7 @@ for(p in 1:length(pars$b0)){
   
   for (t in 1:10){
     
-    NDVI<-pars$b0[p]+pars$b1[p]*NDVI+ pars$b2[p]*datapred$rain[t]
+    NDVI<-pars$b0[p]+NDVI+ pars$b2[p]*datapred$rain[t]
     
     PredOut[p,t]<-NDVI
   }
