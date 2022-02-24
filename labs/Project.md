@@ -32,7 +32,7 @@ Every student will turn in a 5 pg. (or less) writeup including
 
 Every student will also give a ~10 min in class presentation summerizing the above topics
 
-Finally, talk to me while you are working on your project!! Show me how it's going, ask me and your neighbor what we think of your model and your figures. I don't want to know what you did long before I read your project report. 
+Finally, talk to me while you are working on your project!! Show me how it's going, ask me and your neighbor what we think of your model and your figures. I  want to know what you did long before I read your final project report. 
 
 
 
