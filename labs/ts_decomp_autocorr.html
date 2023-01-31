@@ -356,10 +356,10 @@ pre code {
 <p><a href="https://github.com/bobshriver/UNR-EcoForecast/blob/main/lectures/decomp_tutorial.R">Time series decomposition</a></p>
 <p><a href="https://github.com/bobshriver/UNR-EcoForecast/blob/main/lectures/autocorrelation.R">Autocorrelation</a></p>
 <p>The first step is to download the data. We will work with climate data from Tuscon, AZ, not too far from Portal. The data come from a gridded climate product called <a href="http://www.prism.oregonstate.edu/explorer/">PRISM</a>). You can get the .csv file <a href="https://github.com/bobshriver/UNR-EcoForecast/blob/main/data/tucson_prism_monthly.csv">here</a>. Save it to your local drive (click on the “Raw” button then right-click and “Save as”), then 1) read it into R using <code>read.csv()</code> and 2) convert the <code>tmin_C</code> column (minimum temperature) to a time series object. Now you are ready to answer the questions below.</p>
-<p><em>Each group should submit two files as attachments in an email to Bob, an R script containing all the code you wrote, and a pdf/docx/odt file with answers to the following questions. Only one person per group needs to submit files.</em></p>
+<p><em>Each group should submit two files as attachments in webcampus to Bob, an R script containing all the code you wrote, and a pdf/docx file with answers to the following questions. Each person needs to submit files, even if they are the same as your partner</em></p>
 <ol style="list-style-type: decimal">
 <li><p>Decompose the time series using the <code>decompose()</code> function. Is there any clear trend in the minimum temperature time series? What does the seasonal signal look like? Would you get the same answer just by calculating the monthly means? Answer with a figure(s) and a few sentences of explanation. (Are you curious if the same trend shows up for tmax? Let me know if you look into it.)</p></li>
-<li><p>Create lag plots for the tmin data. Can you explain the circular patterns? (I haven’t figured it out yet).</p></li>
+<li><p>Create lag plots for the tmin data. Can you explain the circular patterns?</p></li>
 <li><p>Is there autocorrelation? At what lags (in months)? Is there partial autocorrelation? At what lags? Include a figure(s) with an explanation.</p></li>
 </ol>
 

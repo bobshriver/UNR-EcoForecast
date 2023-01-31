@@ -22,7 +22,7 @@ Save it to your local drive (click on the "Raw" button then right-click and
 convert the `tmin_C` column (minimum temperature) to a time series object. 
 Now you are ready to answer the questions below.
 
-*Each group should submit two files as attachments in an email to Bob,  an R script containing all the code you wrote, and a pdf/docx/odt file with answers to the following questions. Only one person per group needs to submit files.*
+*Each group should submit two files as attachments in webcampus to Bob,  an R script containing all the code you wrote, and a pdf/docx file with answers to the following questions. Each person needs to submit files, even if they are the same as your partner*
 
 1) Decompose the time series using the `decompose()` function. Is there any clear
 trend in the minimum temperature time series? What does the seasonal signal look
@@ -32,7 +32,7 @@ sentences of explanation. (Are you curious if the same trend shows up for
 tmax? Let me know if you look into it.)
 
 2) Create lag plots for the tmin data. Can you explain the circular patterns?
-(I haven't figured it out yet).
+
 
 3) Is there autocorrelation? At what lags (in months)? Is there partial autocorrelation? At what lags? Include a figure(s) with an explanation.
 
