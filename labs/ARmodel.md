@@ -8,7 +8,7 @@ mathjax: true
 
 The purpose of this exercise is to fit a simple AR(1) and use it to forecast. We will be doing this using the Portal NDVI data that we used in last weeks lecture. Everyone should work in groups of two. 
 
-*Each group should submit R script as attachments in an email to Bob*
+*Each individual should submit R script on WebCampus*
 
 Start by loading in the data. We are then going to drop the last ten measurements from the data, we will then and use the withheld data to test  forcasting (see below).
 
