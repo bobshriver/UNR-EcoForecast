@@ -17,7 +17,7 @@ data {
 }
 
 // The parameters accepted by the model. Our model
-// accepts three parameters 'mu' and 'b0', 'b1'.
+// accepts three parameters 'sigma' and 'b0', 'b1'.
 parameters {
   real b0;
   real b1;
