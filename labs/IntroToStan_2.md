@@ -6,7 +6,7 @@ layout: post
 mathjax: true
 ---
 
-*Please email all of your Stan and R code along with a document with answers to the following to Bob*
+*Please turn in your Stan and R code along with a document with answers to the following to Bob*
 
 
 
