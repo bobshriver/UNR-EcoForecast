@@ -37,28 +37,37 @@ length(pars$b0)
 par(mfrow=c(2,2))
 hist(pars$b0)
 hist(pars$b1)
+hist(pars$b2)
 hist(pars$sigma)
 
 
 ##visualizations to check convergence. Have chains converged? 
 #launch_shinystan(fit1)
 
-
-
 PredData<-data[(n-10):n,]
 PredOut<-matrix(NA,length(pars$b0),10)
+
 for (p in 1:length(pars$b0)){
   NDVI<-PredData$NDVI[1]
-  for (t in 1:10){
-    NDVI<-pars$b0[p]+pars$b1[p]*NDVI+pars$b2[p]*PredData$rain[t]
-
-    PredOut[p,t]<-NDVI
-
-    }
+  for(t in 1:10){
+     NDVI<-pars$b0[p]+pars$b1[p]*NDVI+pars$b2[p]*PredData$rain[t]
+  PredOut[p,t]<-NDVI  
   }
+  
+  
+}
 
+hist(PredOut[,1])
 
+matplot(t(PredOut),type='l')
 
-
-
+MeanP<-apply(PredOut,2,mean)
+Upper<-apply(PredOut,2,quantile, prob=.975)
+Lower<-apply(PredOut,2,quantile, prob=.025)
+  
+  
+plot(MeanP,type='l', ylim=c(0,.4)) 
+lines(Upper,lty=2)
+lines(Lower,lty=2)  
+points(PredData$NDVI,col='steelblue')
 
