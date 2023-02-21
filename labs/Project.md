@@ -18,7 +18,7 @@ Talk with Bob about the specifics of your topic before the deadline! (March 9)
 ### Details ###
 All projects should include model development and test the model with new or withheld data data
 
-I want this project to be as useful as possible to your research, so you are not required to use R or Stan to develop your model. However, if you use another programming language I may not be able to help you. Also, if you use a preexisting package to fit your model you must understand what it is doing well enough to explain it to me and the class, simply listing the package name is not enough details. All forecasts should quantify at least some measure of parameter uncertainty and process variability. 
+I want this project to be as useful as possible to your research, so you are not required to use R or Stan to develop your model. However, if you use another programming language I may not be able to help you. Also, if you use a preexisting package to fit your model you must understand what it is doing well enough to explain it to me and the class, simply listing the package name is not enough details. All forecasts should quantify at least some measure of uncertainty (ies) and identify its sources (parameter uncertainty vs process uncertainty). 
 
 Every student will turn in a 5 pg. (or less) writeup including 
 
