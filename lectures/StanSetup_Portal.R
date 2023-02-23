@@ -50,16 +50,16 @@ PredOut<-matrix(NA,length(pars$b0),10)
 for (p in 1:length(pars$b0)){
   NDVI<-PredData$NDVI[1]
   for(t in 1:10){
-     NDVI<-pars$b0[p]+pars$b1[p]*NDVI+pars$b2[p]*PredData$rain[t]
-  PredOut[p,t]<-NDVI  
+     NDVI<-pars$b0[p]+pars$b1*NDVI+pars$b2[p]*PredData$rain[t]
+  PredOut[p,t]<-rnorm(1,NDVI,pars$sigma) 
   }
   
   
 }
 
-hist(PredOut[,1])
+#hist(PredOut[,1])
 
-matplot(t(PredOut),type='l')
+#matplot(t(PredOut),type='l')
 
 MeanP<-apply(PredOut,2,mean)
 Upper<-apply(PredOut,2,quantile, prob=.975)
