@@ -50,8 +50,8 @@ PredOut<-matrix(NA,length(pars$b0),10)
 for (p in 1:length(pars$b0)){
   NDVI<-PredData$NDVI[1]
   for(t in 1:10){
-     NDVI<-pars$b0[p]+pars$b1*NDVI+pars$b2[p]*PredData$rain[t]
-  PredOut[p,t]<-rnorm(1,NDVI,pars$sigma) 
+     NDVI<- rnorm(1,mean=pars$b0[p]+1*NDVI+pars$b2[p]*PredData$rain[t],sd=pars$sigma[p])
+  PredOut[p,t]<-NDVI
   }
   
   
@@ -59,13 +59,42 @@ for (p in 1:length(pars$b0)){
 
 #hist(PredOut[,1])
 
-#matplot(t(PredOut),type='l')
+matplot(t(PredOut),type='l')
 
 MeanP<-apply(PredOut,2,mean)
 Upper<-apply(PredOut,2,quantile, prob=.975)
 Lower<-apply(PredOut,2,quantile, prob=.025)
   
   
+plot(MeanP,type='l', ylim=c(0,.4)) 
+lines(Upper,lty=2)
+lines(Lower,lty=2)  
+points(PredData$NDVI,col='steelblue')
+
+###obs error
+
+PredData<-data[(n-10):n,]
+PredOut<-matrix(NA,length(pars$b0),10)
+
+for (p in 1:length(pars$b0)){
+  NDVI<-PredData$NDVI[1]
+  for(t in 1:10){
+    NDVI<- pars$b0[p]+pars$b1[p]*NDVI+pars$b2[p]*PredData$rain[t]
+    PredOut[p,t]<-rnorm(1,mean=NDVI,sd=pars$sigma[p])
+  }
+  
+  
+}
+
+#hist(PredOut[,1])
+
+matplot(t(PredOut),type='l')
+
+MeanP<-apply(PredOut,2,mean)
+Upper<-apply(PredOut,2,quantile, prob=.975)
+Lower<-apply(PredOut,2,quantile, prob=.025)
+
+
 plot(MeanP,type='l', ylim=c(0,.4)) 
 lines(Upper,lty=2)
 lines(Lower,lty=2)  
