@@ -30,8 +30,8 @@ parameters {
 // and standard deviation 'sigma'.
 model {
   for(t in 2:T){
-  n[t] ~ normal(a+b*n[t-1], sigma);
-  y[t] ~ poisson(exp(n[t]));
+  n[t] ~ normal(a+b*n[t-1], sigma); //process model
+  y[t] ~ poisson(exp(n[t]));//observation
 
 }
   
