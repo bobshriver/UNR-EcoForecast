@@ -11,13 +11,13 @@ First, open R, then go to File>New script. This is where we will code the script
 
 1. Assign values to "r" and "K" 
 
-2. Create a "Time" vector, just as we did on the spreadsheet (hint: use the `seq()` function). To make sure this worked, you can copy and paste from the script editor into the R command line, or you can select the line, and go to Edit>Run line or selection.
+2. Create a "Time" vector (hint: use the `seq()` function). To make sure this worked, you can copy and paste from the script editor into the R command line, or you can select the line, and go to Edit>Run line or selection.
 
 3. Create an "N" vector using rep(). I recommend filling it with zeros or NAs. To assign an initial value to `N` at time 1, use `N[1] =` .
 
 4. (Optional) Create a logistic growth function (use `function()`). This will probably be the trickiest 	part of  the program. Refer back the section in the first tutorial on creating functions, or ask me for help.
 
-5. Set up a `for()` loop to step through time, just as we stepped down the Time column on the	spreadsheet. Remember, to reference a particular value in the N vector, you use `N[1]`, or `N[2]`, or (hint!) `N[i-1]` where i might be the loop index. You will "call" your logistic growth 	function within this loop.
+5. Set up a `for()` loop to step through time. Remember, to reference a particular value in the N vector, you use `N[1]`, or `N[2]`, or (hint!) `N[i-1]` where i might be the loop index. You will "call" your logistic growth 	function within this loop.
 
 6. Graph the results using `plot()`.
 
