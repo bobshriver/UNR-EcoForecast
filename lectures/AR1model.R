@@ -1,7 +1,7 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))##set working directory to current file 
 
 
-data = read.csv('data/portal_timeseries.csv')
+data = read.csv('../data/portal_timeseries.csv')
 n<-length(data$NDVI)
 #remove last 10
 datafit<-data[1:(n-10),] ##
