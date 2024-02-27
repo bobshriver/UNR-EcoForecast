@@ -13,7 +13,7 @@ Any ecological or environmental system with enough data.
 
 The project needs to include some form of near-term spatial or temporal forecasting, and have data that can be used to test the forecast at that spatial and temporal scale. For example forecasting where a species occurs now based on occurrence data would be appropriate because existing occurrence data can be withheld to test the forecast. Forecasting where a species will occur in 100 years with climate change is not an appropriate topic for this project as it is impossible to test this forecast at this time horizon. 
 
-Talk with Bob about the specifics of your topic before the deadline! (March 9)
+Talk with Bob about the specifics of your topic before the deadline! (March 12)
 
 ### Details ###
 All projects should include model development and test the model with new or withheld data data
@@ -30,7 +30,7 @@ Every student will turn in a 5 pg. (or less) writeup including
 
 4) Opportunities for improvement and future directions.
 
-Every student will also give a ~10 min in class presentation summerizing the above topics
+Every student will also give a ~10 min in class presentation summarizing the above topics
 
 Finally, talk to me while you are working on your project!! Show me how it's going, ask me and your neighbor what we think of your model and your figures. I  want to know what you did long before I read your final project report. 
 
