@@ -38,7 +38,7 @@ line of code, substituting in the name of your data frame and the filename you w
 ```
 write.csv(your_data_frame, your_file.csv, header=T)
 ```
-Email the .csv file to Bob  as an attachment.
+Turn in your .csv file on Webcampus by 5pm on 3/10
 
 ### Background ###
 
