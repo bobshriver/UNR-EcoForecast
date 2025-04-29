@@ -30,7 +30,7 @@ Every student will turn in a 5 pg. (or less) writeup including
 
 4) Opportunities for improvement and future directions.
 
-Every student will also give a ~10 min in class presentation summarizing the above topics
+Every student will also give a ~5 min in class presentation summarizing the above topics
 
 Finally, talk to me while you are working on your project!! Show me how it's going, ask me and your neighbor what we think of your model and your figures. I  want to know what you did long before I read your final project report. 
 
